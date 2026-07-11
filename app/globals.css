@@ -1,26 +1,160 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff;
+  --background-dark: #f5f5f5;
+  --background-light: #ffffff;
+  --foreground: #171717; */
+
+  
+  --primary-900:#102207;
+  --primary-800:#152C09;
+  --primary-700:#1C390C;
+  --primary-600:#23490F;
+  --primary-500:#275011;
+  --primary-400:#527341;
+  --primary-300:#6E8A60;
+  --primary-200:#9CAF92;
+  --primary-100:#BCC9B5;
+  --primary-50:#E9EEE7;
+ 
+  --secondary-burnt-900:#311807;
+  --secondary-burnt-800:#3F1F09;
+  --secondary-burnt-700:#53290B;
+  --secondary-burnt-600:#68340E;
+  --secondary-burnt-500:#6F370F;
+  --secondary-burnt-400:#7D3E11;
+  --secondary-burnt-300:#8B4513;
+  --secondary-burnt-200:#DBC5B6;
+  --secondary-burnt-100:#EEE3DC;
+  --secondary-burnt-50:#F3ECE7;
+
+  --secondary-earth-900:#211C12;
+  --secondary-earth-800:#4C412C;
+  --secondary-earth-700:#625439;
+  --secondary-earth-600:#7E6B49;
+  --secondary-earth-500:#8A7650;
+  --secondary-earth-400:#A19173;
+  --secondary-earth-300:#B1A38A;
+  --secondary-earth-200:#C9C0AF;
+  --secondary-earth-100:#DBD5C9;
+  --secondary-earth-50:#F3F1EE;
+
+
+
+  --black: #000000;
+  --gray-700: #2B2D2A;
+  --gray-600: #4C4949;
+  --gray-500: #878686;
+  --gray-400: #B0B0B0;
+  --gray-300: #D9D9D9;
+  --gray-200: #E6E6E6;
+  --gray-100: #F1F1F1;
+  --white: #ffffff;
+
+
+  --background: var(--white);
+  --foreground: var(--gray-700);
+
+  --light-foreground: var(--gray-600);
+
+  --surface-primary-background-light: var(--primary-50);
+  --surface-primary-background-mid:var(--primary-200);
+  --surface-primary-background-dark: var(--primary-900);
+  --surface-burnt-background-light: var(--secondary-burnt-50);
+  --surface-burnt-background-mid: var(--secondary-burnt-400);
+  --surface-burnt-background-dark: var(--secondary-burnt-900);
+  --surface-earth-background-light: var(--secondary-earth-50);
+  --surface-earth-background-mid: var(--secondary-earth-400);
+  --surface-earth-background-dark: var(--secondary-earth-800);
+
+  --primary: var(--primary-500);
+  --primary-hover: var(--primary-50);
+
+  --secondary-earth: var(--secondary-earth-500);
+  --secondary-earth-hover: var(--secondary-earth-50);
+
+  --secondary-burnt: var(--secondary-burnt-500);
+  --secondary-burnt-hover: var(--secondary-burnt-50);
+
+
+  --primary-button: var(--primary-500);
+  --primary-button-hover: var(--primary-50);
+
+  --secondary-button: var(--secondary-burnt-500);
+  --secondary-button-hover: var(--secondary-burnt-50);
+
+
+  --border: var(--gray-200);
+
+  --muted: var(--gray-500);
+
+  --accent: var(--secondary-burnt-500);
+
 }
 
 @theme inline {
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-300);
+
+  --color-secondary: var(--secondary-burnt);
+  --color-secondary-hover: var(--secondary-burnt-50);
+
+
+  --color-primary-50: var(--primary-50);
+  --color-primary-200: var(--primary-200);
+
+  --color-earth: var(--secondary-earth);
+  --color-earth-hover: var(--secondary-earth-50);
+  --color-earth-500: var(--secondary-earth-500);
+
+  --color-burnt: var(--secondary-burnt);
+
+  --color-surface-green: var(--surface-primary-background-light);
+  --color-surface-green-dark: var(--primary-900);
+  --color-surface-earth-light: var(--secondary-earth-50);
+  --color-surface-earth-dark: var(--secondary-earth-800);
+  --color-surface-burnt: var(--secondary-burnt-50);
+  --color-surface-burnt-dark: var(--secondary-burnt-900);
+
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+
+  --font-body: var(--font-body);
+  --font-heading: var(--font-heading);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }

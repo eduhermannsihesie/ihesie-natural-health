@@ -18,7 +18,7 @@ export default function ProductHero() {
 
       {/* Overlay */}
 
-      <div className="absolute inset-0 bg-black/74" />
+      <div className="absolute inset-0 bg-surface-green-dark/80" />
 
       <Container>
 

@@ -42,10 +42,9 @@ export default function ProductCard({
         </p>
 
       </div>
-
       <Button
         variant="secondary"
-        className="mt-6 w-full rounded-4xl"
+        className="mt-6 w-full rounded-3xl"
       >
         Add to Cart
       </Button>

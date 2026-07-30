@@ -16,8 +16,8 @@ export default function FeatureItem({
           shrink-0
           font-heading
           text-3xl
-          sm:text-4xl
-          lg:text-5xl
+          sm:text-3xl
+          lg:text-4xl
           font-bold
           text-primary-hover
           leading-none
@@ -31,9 +31,10 @@ export default function FeatureItem({
           className="
             font-body
             text-xl
-            sm:text-2xl
-            lg:text-3xl
+            sm:text-xl
+            lg:text-2xl
             font-semibold
+            text-primary-hover
           "
         >
           {title}
@@ -44,8 +45,6 @@ export default function FeatureItem({
             mt-2
             text-sm
             sm:text-base
-            leading-6
-            sm:leading-7
             text-muted
           "
         >

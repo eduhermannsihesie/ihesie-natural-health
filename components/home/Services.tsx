@@ -7,26 +7,23 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section className="bg-surface-earth py-16 sm:py-20 lg:py-28">
+    <section className="pt-30 lg:pt-38">
 
       <Container>
 
         <div className="mx-auto max-w-3xl text-center">
 
-          <h2 className="font-heading text-4xl lg:text-5xl font-medium">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium">
             Our Natural Wellness Services
           </h2>
 
-          <p className="mt-4 font-body text-xl lg:text-2xl ">Supporting Your Journey to Better Health</p>
+          <p className="mt-4 text-xl font-medium text-primary-hover ">Supporting Your Journey to Better Health</p>
 
-          <p className="mt-4 text-body text-base lg:text-lg leading-8 max-w-3xl">
-            Every individual deserves a personalized approach to health. Our natural wellness programs are designed to support different aspects of physical and emotional well-being.
-          </p>
+         
 
         </div>
 
-{/* <div className="relative mt-20 py-17 overflow-hidden w-240 mx-auto" > */}
-  <div className="relative mt-14 overflow-hidden mx-auto max-w-5xl px-4 py-12 lg:px-8 lg:py-16">
+  <div className="relative mt-8 overflow-hidden mx-auto max-w-5xl px-4 py-6 lg:py-10 lg:px-8">
   <Image 
     src="/images/plant-background.png" 
     fill
@@ -38,8 +35,7 @@ export default function Services() {
   
  <div className="absolute inset-0 bg-surface-earth-dark/62 z-10" />
  
- {/* <div className="relative z-20 w-210 mx-auto border border-border px-6 py-5"> */}
-  <div className="relative z-20 mx-auto max-w-6xl border border-border bg-white/5 p-4 md:p-6 lg:p-8">
+ <div className="relative z-20 mx-auto max-w-6xl border border-border bg-white/5 p-4 md:p-6 lg:p-8">
   
   <div className="grid gap-3 md:grid-cols-[1.9fr_1.1fr_1.1fr] ">
 
@@ -102,7 +98,11 @@ export default function Services() {
 </div>
 </div>
 
-        <div className="mt-10 flex justify-center align-items">
+        <div className=" mt-4 lg:mt-6 flex  flex-col gap-7 items-center">
+
+           <p className="mt-4 text-center max-w-3xl">
+            Every individual deserves a personalized approach to health. Our natural wellness programs are designed to support different aspects of physical and emotional well-being.
+          </p>
 
           <Link href="/contactus">
 

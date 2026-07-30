@@ -26,6 +26,7 @@ export default function Navbar() {
             top-0
             z-50
             border-b
+            shadow-xl
             border-border
             bg-white/90
             backdrop-blur-lg
@@ -48,7 +49,7 @@ export default function Navbar() {
                 priority
               />
               <div className="flex flex-col leading-none">
-                 <span className=" sm:block font-body text-base lg:text-lg xl:text-xl font-bold text-primary">
+                 <span className=" sm:block font-body text-lg xl:text-xl font-bold text-primary">
                   Ihesie Natural Health </span>
               </div>
           </Link>
@@ -171,6 +172,7 @@ export default function Navbar() {
                           >
 
                               <Button
+                                  size="lg"
                                   className="w-full mt-2 "
                               >
                                   Book Consultation

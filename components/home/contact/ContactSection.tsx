@@ -4,7 +4,7 @@ import ContactForm from "./Contactform";
 
 export default function ContactSection() {
   return (
-    <section className="relative overflow-hidden bg-surface-earth py-16 px-0 lg:px-22 sm:py-20 lg:py-28">
+    <section className="relative overflow-hidden pt-30 px-0 lg:px-22 lg:pt-38">
 
       {/* Decorative flower */}
       <Image

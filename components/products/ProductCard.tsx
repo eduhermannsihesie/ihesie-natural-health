@@ -88,7 +88,7 @@ export default function ProductCard({
        
         <Button
           variant="secondary"
-          className="mt-8 rounded-3xl text-xl w-full "
+          className="mt-8 rounded-xl text-xl w-full "
         >
           Buy
         </Button>

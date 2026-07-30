@@ -31,7 +31,8 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-16 sm:py-20 lg:py-28">
+    
+    <section className="pt-30 lg:pt-38">
 
       <Container>
 
@@ -118,13 +119,9 @@ export default function Testimonials() {
                 height={150}
                 className="
                   absolute
-                  -right-10
-                  lg:-right-13
-                  -top-20
-                  lg:-top-25
+                  -right-6
+                  -top-14
                   w-20
-                  md:w-28
-                  lg:w-36
                   h-auto
                   hidden
                   md:block
@@ -138,7 +135,7 @@ export default function Testimonials() {
 
           {/* Testimonial */}
 
-          <div className="mt-10 lg:mt-14">
+          <div className="mt-8 lg:mt-10">
 
             <TestimonialCard
               quote={testimonials[current].quote}

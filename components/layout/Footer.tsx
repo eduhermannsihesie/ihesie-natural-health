@@ -17,11 +17,11 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="mt-24">
+    <footer id="contact" className="mt-30 lg:mt-38">
 
       {/* Main Footer */}
 
-      <div className="bg-surface-earth py-14">
+      <div className="">
 
         <Container>
 
@@ -30,17 +30,17 @@ export default function Footer() {
             {/* Logo */}
             <div>
 
-              <Link href="/" className="flex items-center gap-1 font-heading text-2xl font-bold text-primary">
+              <Link href="/" className="flex items-center gap-0 font-heading text-2xl font-bold text-primary">
                 <Image
                   src="/branding/ihesie-logo.png"
                   alt="Ihesie Natural Health"
                   width={80}
                   height={80}
-                  className="h-auto w-22 lg:w-25"
+                  className="h-auto w-22"
                 />
 
                 
-                  <span className="font-body text-lg lg:text-xl font-bold text-primary">
+                  <span className="font-body text-lg font-bold text-primary">
                     Ihesie Natural Health </span>
               
               </Link>
@@ -49,7 +49,7 @@ export default function Footer() {
 
             {/* Contact */}
 
-            <div className="mt-10 flex items-center flex-col lg:flex-row gap-10 lg:gap-30">
+            <div className="mt-6 flex items-center flex-col lg:flex-row gap-8 lg:gap-10 ">
 
               <div className="flex items-center gap-10 lg:items-start">
                 <div className="flex items-center gap-2 text-base lg:text-lg text-gray-600 font-medium">
@@ -121,26 +121,18 @@ export default function Footer() {
 
             {/* Navigation */}
 
-            <div className="mt-13 flex flex-wrap justify-center gap-4 lg:gap-6 text-sm font-semibold text-gray-600">
+            <div className="mt-10 flex flex-wrap justify-center gap-4  text-sm font-semibold text-gray-600">
 
-              <Link href="/about" className=" border-r-2 border-gray-300 pr-4 hover:text-primary transition">
+              <Link href="/about-us" className=" border-r-2 border-gray-300 pr-4 hover:text-primary transition">
                 About Us
-              </Link>
-
-              <Link href="/services" className="  border-r-2 border-gray-300 pr-4 hover:text-primary transition">
-                Services
               </Link>
 
               <Link href="/products" className="  border-r-2 border-gray-300 pr-4 hover:text-primary transition">
                 Products
               </Link>
 
-              <Link href="/contact" className=" border-r-2 border-gray-300 pr-4 hover:text-primary transition">
-                Contact
-              </Link>
-
-              <Link href="/blog" className="hover:text-primary transition">
-                Blog
+              <Link href="/wellness" className="hover:text-primary transition">
+                Wellness Insights
               </Link>
 
             </div>

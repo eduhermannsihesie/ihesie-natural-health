@@ -136,7 +136,7 @@ export default function HealingApproach() {
 
           <Link href="/book-consultation">
 
-            <Button size="xl">
+            <Button size="lg">
               Book a Consultation
             </Button>
 

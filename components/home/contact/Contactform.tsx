@@ -45,7 +45,7 @@ export default function ContactForm() {
     return (
          <form onSubmit={handleSubmit(onSubmit)} className="mx-auto mt-25 max-w-6xl">
 
-          <div className="mb-9 grid lg:gap-50 lg:grid-cols-2">
+          <div className="mb-8 grid lg:gap-40 lg:grid-cols-2">
 
             {/* Left Column */}
 
@@ -67,7 +67,7 @@ export default function ContactForm() {
                     bg-transparent
                     transition-colors
                     duration-300
-                    py-3
+                    py-2
                     outline-none
                     focus:border-primary-200
                   "
@@ -91,7 +91,7 @@ export default function ContactForm() {
                     bg-transparent
                     transition-colors
                     duration-300
-                    py-3
+                    py-2
                     outline-none
                     focus:border-primary-200
                   "
@@ -121,7 +121,7 @@ export default function ContactForm() {
                     bg-transparent
                     transition-colors
                     duration-300
-                    py-3
+                    py-2
                     outline-none
                     focus:border-primary-200
                   "
@@ -144,7 +144,7 @@ export default function ContactForm() {
                     bg-transparent
                     transition-colors
                     duration-300
-                    py-3
+                    py-2
                     outline-none
                     focus:border-primary-200
                   "
@@ -172,7 +172,7 @@ export default function ContactForm() {
                     bg-transparent
                     transition-colors
                     duration-300
-                    -py-2
+                    -py-0
                     outline-none
                     focus:border-primary-200
                   "
@@ -182,7 +182,7 @@ export default function ContactForm() {
 
           {/* Button */}
 
-          <div className="mt-12 flex justify-center">
+          <div className="mt-18 flex justify-center">
 
             <button
               disabled={isSubmitting}

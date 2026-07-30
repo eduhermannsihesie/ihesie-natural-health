@@ -13,6 +13,6 @@ export const navigation = [
   },
   {
     label: "Contact Us",
-    href: "/contactus",
+    href: "/#contact",
   },
 ];

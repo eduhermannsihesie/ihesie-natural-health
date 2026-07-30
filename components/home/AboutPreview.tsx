@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
+
 import Container from "@/components/layout/Container";
 import Button from "@/components/ui/Button";
 
 
 export default function AboutPreview() {
   return (
-    <section className="py-16 sm:py-20 lg:py-28">
+    <section className="pt-20 lg:pt-28">
       <Container>
 
         <div className="relative grid lg:grid-cols-2 items-center">
@@ -24,7 +25,7 @@ export default function AboutPreview() {
 
           <div>           
 
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xltext-4xl lg:text-5xl leading-tight font-medium">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium">
               Nature's Healing,
               <br />
               Backed by Research
@@ -36,11 +37,11 @@ export default function AboutPreview() {
 
           <div className="flex flex-col items-start justify-center">
 
-            <p className="mt-6 text-base lg:text-lg leading-8 text-foreground">
+            <p className="mt-6">
               At Ihesie Natural Health Services, we believe that nature holds the answer to lasting wellness. Our mission is to combine the healing power of Earth's vegetation with professional research and holistic healthcare practices to help individuals regain sound health naturally.
             </p>
 
-            <p className="mt-6 text-base lg:text-lg leading-8 text-foreground">
+            <p className="mt-6">
               For years, we have developed natural remedies, therapies, and wellness protocols focused on addressing the root causes of illness — not just temporary symptoms.
             </p>
 

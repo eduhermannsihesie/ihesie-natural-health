@@ -3,19 +3,17 @@ import Link from "next/link";
 
 export default function CallToAction() {
   return (
-    <section className="py-16 sm:py-20 lg:py-28">
+    <section className="pt-20 lg:pt-28">
 
 
         <div
           className="
             mx-auto
             bg-surface-green-dark
-            px-6
+            px-12
             py-14
-            sm:px-10
-            sm:py-18
             lg:px-16
-            lg:py-24
+            lg:py-18
             text-center
           "
         >

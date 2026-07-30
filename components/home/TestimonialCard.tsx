@@ -14,12 +14,9 @@ export default function TestimonialCard({
         className="
           font-body
           text-base
-          sm:text-lg
-          lg:text-xl
+          lg:text-lg
           italic
-          leading-7
-          sm:leading-9
-          text-foreground
+          text-primary-hover
         "
       >
         "{quote}"
@@ -30,7 +27,6 @@ export default function TestimonialCard({
           mt-6
           lg:mt-8
           text-sm
-          sm:text-lg
           text-primary-200
         "
       >

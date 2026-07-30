@@ -9,7 +9,7 @@ import FeatureItem from "./FeatureItem";
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative overflow-hidde py-16 sm:py-20 lg:py-28">
+    <section className="relative overflow-hidde pt-30 lg:pt-38">
 
       {/* Decorative flower */}
      <Image
@@ -35,11 +35,11 @@ export default function WhyChooseUs() {
 
         <div className="text-center max-w-3xl mx-auto">
 
-          <h2 className="font-heading text-4xl lg:text-5xl font-medium">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium ">
             Why Choose Us
           </h2>
 
-          <p className="mt-4 text-xl lg:text-2xl">
+          <p className="mt-4 text-xl font-medium text-primary-hover ">
             Why Families Trust Ihesie Natural Health Services
           </p>
 
@@ -50,10 +50,7 @@ export default function WhyChooseUs() {
         <div
           className="
             mt-10
-            lg:mt-14
-            py-6
-            sm:py-8
-            lg:py-10
+            lg:mt-12
             grid
             grid-cols-1
             lg:grid-cols-2
@@ -61,6 +58,8 @@ export default function WhyChooseUs() {
             lg:gap-20
             xl:gap-24
             items-center
+            max-w-6xl
+            mx-auto
           "
         >
 
@@ -70,13 +69,13 @@ export default function WhyChooseUs() {
            <Image
               src="/images/whychooseus.png"
               alt="Medicinal Herbs"
-              width={450}
-              height={450}
+              width={420}
+              height={420}
               className="
-                w-72
-                sm:w-80
-                md:w-96
-                lg:w-full
+                w-65
+                sm:w-75
+                md:w-85
+                lg:w-95
                 max-w-md
                 h-auto
                 object-cover
@@ -91,8 +90,8 @@ export default function WhyChooseUs() {
             className="
               flex
               flex-col
-              gap-6
-              lg:gap-8
+              gap-4
+              lg:gap-6
             "
           >
 
@@ -111,12 +110,11 @@ export default function WhyChooseUs() {
 
         {/* Button */}
 
-        <div className="mt-10 lg:mt-14 flex justify-center">
+        <div className="mt-10 lg:mt-16 flex justify-center">
 
           <Link href="/contactus">
 
             <Button 
-              size="xl"
               className="w-full sm:w-auto text-base lg:text:lg px-10 py-5">
               Book a Consultation
             </Button>

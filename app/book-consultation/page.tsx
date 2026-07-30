@@ -1,7 +1,5 @@
-import React from 'react'
+import ConsultationWizard from '@/components/consultation/ConsultationWizard';
 
-export default function BookConsultation() {
-  return (
-    <div>Book Consultation</div>
-  )
+export default function BookConsultationPage() {
+  return <ConsultationWizard />;
 }

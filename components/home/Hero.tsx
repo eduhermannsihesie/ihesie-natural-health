@@ -46,7 +46,7 @@ const Hero = () => {
                     <Link href="/contactus">
                             <Button
                                 variant="primary"
-                               
+                                size="lg"
                                 className="border-2 border-white rounded-md text-lg"
                             >
                             Book a Consultation
@@ -56,7 +56,7 @@ const Hero = () => {
                     <Link href="/products">
                              <Button 
                                 variant="secondary" 
-                               
+                                size="lg"
                                 className='border-2 border-white rounded-md text-lg'
                                 >
                         Explore Products

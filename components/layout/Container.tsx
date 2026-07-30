@@ -16,11 +16,9 @@ export default function Container({
         mx-auto
         w-full
         max-w-screen-2xl
-        px-4
-        sm:px-8
-        md:px-12
-        lg:px-16
-        xl:px-18
+        px-6
+        sm:px-14
+        lg:px-18
         `,
         className
       )}

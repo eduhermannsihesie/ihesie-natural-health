@@ -1,15 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import Container from "@/components/layout/Container";
-import Button from "@/components/ui/Button";
 
 import { whyChooseOurPeoduct } from "@/constants/WhyChooseOurProduct";
 import FeatureProductItem from "./FeaturedProductItem";
 
 export default function WhyChooseOurProduct() {
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-50">
+    <section className="relative overflow-hidden pt-20 lg:pt-28">
 
       {/* Decorative flower */}
      <Image
@@ -45,11 +43,8 @@ export default function WhyChooseOurProduct() {
 
         <div
           className="
-            mt-10
-            lg:mt-14
-            py-6
-            sm:py-8
-            lg:py-10
+            mt-14
+            lg:mt-20
             grid
             grid-cols-1
             lg:grid-cols-2
@@ -57,6 +52,8 @@ export default function WhyChooseOurProduct() {
             lg:gap-20
             xl:gap-24
             items-center
+            max-w-6xl
+            mx-auto
           "
         >
 
@@ -69,10 +66,10 @@ export default function WhyChooseOurProduct() {
               width={450}
               height={450}
               className="
-                w-72
-                sm:w-80
-                md:w-96
-                lg:w-full
+                w-65
+                sm:w-75
+                md:w-85
+                lg:w-95
                 max-w-md
                 h-auto
                 object-cover
@@ -87,8 +84,8 @@ export default function WhyChooseOurProduct() {
             className="
               flex
               flex-col
-              gap-6
-              lg:gap-8
+              gap-4
+              lg:gap-6
             "
           >
 

@@ -44,7 +44,7 @@ export default function ProductCard({
       </div>
       <Button
         variant="secondary"
-        className="mt-6 w-full rounded-3xl"
+        className="mt-6 w-full rounded-md"
       >
         Add to Cart
       </Button>

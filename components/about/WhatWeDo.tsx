@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section className="py-16 sm:py-20 lg:py-28">
+    <section className="pt-30 lg:pt-38">
 
       <Container>
 
@@ -18,12 +18,12 @@ export default function Services() {
             </h2>
 
 
-            <p className="mt-4 text-body text-base lg:text-lg mx-auto leading-8 max-w-lg">
+            <p className="mt-3 text-body text-base lg:text-lg text-primary-hover mx-auto leading-8 max-w-lg">
                     We provide natural wellness support across a wide range of health areas, including:          </p>
 
         </div>
 
-        <div className="relative mt-12 overflow-hidden mx-auto max-w-5xl px-4 py-12 lg:px-8 lg:py-16">
+        <div className="relative mt-6 overflow-hidden mx-auto max-w-5xl px-4 py-12 lg:px-8 lg:py-16">
                 <Image 
                     src="/images/plant-background.png" 
                     fill
@@ -98,9 +98,9 @@ export default function Services() {
                 </div>
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-10 text-center">
 
-            <p className="max-w-3xl mx-auto text-base lg:text-lg ">
+            <p className="max-w-3xl mx-auto text-base lg:text-lg text-primary-hover">
                 We also offer a range of carefully developed botanical wellness products designed to support everyday health.
             </p>
          

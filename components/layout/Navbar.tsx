@@ -38,6 +38,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
               href="/"
+            //   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="flex items-center gap-1 font-heading text-xl lg:text-2xl font-bold text-primary"
             >
               <Image 

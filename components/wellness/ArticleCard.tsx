@@ -26,22 +26,22 @@ export default function ArticleCard({
                 alt={title}
                 width={180}
                 height={180}
-                className="rounded-lg object-cover"
+                className="rounded object-cover"
             />
 
             <div>
 
-                <h3 className="font-heading text-2xl">
+                <h3 className="font-heading text-xl lg:text-2xl font-semibold">
                     {title}
                 </h3>
 
-                <p className="mt-3 text-muted leading-7">
+                <p className="mt-3 text-muted">
                     {description}
                 </p>
 
                 <Link
                     href="#"
-                    className="mt-4 inline-block text-primary font-semibold"
+                    className="mt-4 inline-block text-secondary text-sm font-semibold"
                 >
                     Read Article →
                 </Link>

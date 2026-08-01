@@ -17,7 +17,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer id="contact" className="mt-30 lg:mt-38">
+    <footer id="contact" className="scroll-mt-24 mt-30 lg:mt-38">
 
       {/* Main Footer */}
 

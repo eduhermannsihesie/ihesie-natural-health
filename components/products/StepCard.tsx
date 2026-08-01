@@ -19,10 +19,9 @@ export default function StepCard({
         <span
           className="
             font-heading
-            text-4xl
+            text-3xl
             font-bold
             text-primary-hover
-            leading-none
           "
         >
           {id}
@@ -32,7 +31,7 @@ export default function StepCard({
 
         <div>
 
-          <h3 className="text-2xl font-medium">
+          <h3 className="text-xl font-semibold text-primary-hover">
             {title}
           </h3>
 
@@ -40,7 +39,6 @@ export default function StepCard({
             className="
               mt-1
               text-base
-              leading-7
               max-w-xs
             "
           >

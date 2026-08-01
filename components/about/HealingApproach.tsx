@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function HealingApproach() {
   return (
-    <section className="py-16 sm:py-20 lg:py-28">
+    <section className="pt-30 lg:pt-38">
       <Container>
 
         {/* Heading */}
@@ -136,7 +136,10 @@ export default function HealingApproach() {
 
           <Link href="/book-consultation">
 
-            <Button size="lg">
+            <Button 
+              size="lg"
+                className="text-lg py-6 px-14"
+            >
               Book a Consultation
             </Button>
 

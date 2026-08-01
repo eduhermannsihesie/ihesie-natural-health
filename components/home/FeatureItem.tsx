@@ -16,11 +16,9 @@ export default function FeatureItem({
           shrink-0
           font-heading
           text-3xl
-          sm:text-3xl
           lg:text-4xl
           font-bold
           text-primary-hover
-          leading-none
         "
       >
         {number}
@@ -31,7 +29,6 @@ export default function FeatureItem({
           className="
             font-body
             text-xl
-            sm:text-xl
             lg:text-2xl
             font-semibold
             text-primary-hover

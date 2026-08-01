@@ -115,7 +115,9 @@ export default function WhyChooseUs() {
           <Link href="/contactus">
 
             <Button 
-              className="w-full sm:w-auto text-base lg:text:lg px-10 py-5">
+              size="lg"
+              className="text-lg py-6 px-14"
+            >
               Book a Consultation
             </Button>
             

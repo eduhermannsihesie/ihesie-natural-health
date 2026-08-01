@@ -3,7 +3,7 @@ import Container from "@/components/layout/Container";
 
 export default function CoreBelief() {
   return (
-    <section className="relative py-16 sm:py-20 lg:py-28">
+    <section className="relative pt-20 lg:pt-28">
 
       {/* Decorative Leaf */}
        <Image
@@ -31,7 +31,7 @@ export default function CoreBelief() {
               Nature's Guarantee
             </h4>
 
-            <p className="mt-6 text-base lg:text-lg leading-8">
+            <p className="mt-6 text-base">
               We believe that the natural world contains remarkable
               resources that can support human health and well-being.
               Guided by research and professional practice, we are
@@ -39,7 +39,7 @@ export default function CoreBelief() {
               solutions responsibly.
             </p>
 
-            <p className="mt-4 text-base lg:text-lg leading-8 ">
+            <p className="mt-4 text-base">
               Our mission is to help individuals pursue lasting wellness
               through holistic care and nature-inspired therapies.
             </p>

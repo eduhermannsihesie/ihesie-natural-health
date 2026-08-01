@@ -41,7 +41,7 @@ export default function GettingStarted() {
                className="
                       mt-16
                         grid
-                        gap-10
+                        gap-5
                          md:grid-cols-3
                         ">
 

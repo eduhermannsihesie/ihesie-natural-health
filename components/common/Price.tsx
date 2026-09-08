@@ -3,16 +3,39 @@
 import { useCurrency } from "@/hooks/useCurrency";
 import { formatCurrency } from "@/lib/currency";
 
-interface Props {
+interface PriceProps {
   amount: number;
 }
 
-export default function Price({ amount }: Props) {
-  const { locale, currency } = useCurrency();
+export default function Price({ amount }: PriceProps) {
+  const {
+    locale,
+    currency,
+    exchangeRate,
+    loading,
+  } = useCurrency();
+
+  if (loading) {
+    return (
+      <>
+        {formatCurrency(
+          amount,
+          "en-NG",
+          "NGN"
+        )}
+      </>
+    );
+  }
+
+  const convertedAmount = amount * exchangeRate;
 
   return (
     <>
-      {formatCurrency(amount, locale, currency)}
+      {formatCurrency(
+        convertedAmount,
+        locale,
+        currency
+      )}
     </>
   );
 }

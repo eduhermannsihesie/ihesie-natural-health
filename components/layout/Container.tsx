@@ -17,8 +17,8 @@ export default function Container({
         w-full
         max-w-screen-2xl
         px-6
-        sm:px-14
-        lg:px-18
+        sm:px-16
+        lg:px-20
         `,
         className
       )}

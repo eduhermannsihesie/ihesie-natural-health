@@ -7,23 +7,23 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section className="pt-30 lg:pt-38">
+    <section className="pt-30 lg:pt-40">
 
       <Container>
 
-        <div className="mx-auto max-w-xl text-center">
+        <div className="mx-auto max-w-2xl text-center">
 
-            <h2 className="font-heading text-4xl lg:text-5xl font-medium">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[40px] font-medium">
                 What We Do
             </h2>
 
 
-            <p className="mt-3 text-body text-base lg:text-lg text-primary-hover mx-auto leading-8 max-w-lg">
+            <p className="mt-3 text-body text-base lg:text-lg text-primary-hover mx-auto leading-8 ">
                     We provide natural wellness support across a wide range of health areas, including:          </p>
 
         </div>
 
-        <div className="relative mt-6 overflow-hidden mx-auto max-w-5xl px-4 py-12 lg:px-8 lg:py-16">
+        <div className="relative mt-8 overflow-hidden mx-auto max-w-235 px-4 py-5 lg:py-8 lg:px-6">
                 <Image 
                     src="/images/plant-background.png" 
                     fill
@@ -100,11 +100,11 @@ export default function Services() {
 
         <div className="mt-10 text-center">
 
-            <p className="max-w-3xl mx-auto text-base lg:text-lg text-primary-hover">
+            <p className="max-w-3xl mx-auto text-base text-muted">
                 We also offer a range of carefully developed botanical wellness products designed to support everyday health.
             </p>
          
-            <Link href="/contactus">
+            <Link href="/products">
 
                 <Button 
                 size="lg"

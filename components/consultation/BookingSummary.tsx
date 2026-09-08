@@ -56,8 +56,10 @@ export default function BookingSummary({
           </div>
 
           <p className="text-[10px] leading-5 text-gray-600">
-            Once payment is successful, your consultation  will be confirmed and you will receive a confirmation vial email and WhatsApp.
-          </p>
+              Once payment is successful, your consultation will be confirmed
+              and you will receive confirmation by email and your preferred
+              communication method.
+            </p>
 
         </div>
 

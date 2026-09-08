@@ -1,7 +1,7 @@
   "use client";
 
 import { CheckCircle2, Download, House } from "lucide-react";
-
+import { ConsultationBooking } from "@/types/consultation"; 
 interface Props {
   consultationId: string;
   treatment: string;

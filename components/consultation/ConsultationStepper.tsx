@@ -7,7 +7,6 @@ const steps = [
   "Date & Time",
   "Details",
   "Payment",
-  "Done",
 ];
 
 export default function ConsultationStepper({
@@ -19,15 +18,21 @@ export default function ConsultationStepper({
 
         {steps.map((label, index) => {
           const number = index + 1;
-          const completed = currentStep >= number;
-          const connectorCompleted = currentStep > number;
+
+          const completed =
+            currentStep >= number;
+
+          const connectorCompleted =
+            currentStep > number;
 
           return (
             <div
               key={label}
               className="relative flex flex-1 flex-col items-center"
             >
+
               {/* Connector Line */}
+
               {index < steps.length - 1 && (
                 <div
                   className="
@@ -36,13 +41,14 @@ export default function ConsultationStepper({
                     left-1/2
                     h-0.5
                     w-full
-                    translate-x-0
                   "
                 >
                   {/* Grey line */}
+
                   <div className="absolute inset-0 bg-neutral-200" />
 
                   {/* Green line */}
+
                   <div
                     className={`
                       absolute
@@ -50,6 +56,7 @@ export default function ConsultationStepper({
                       left-0
                       transition-all
                       duration-300
+
                       ${
                         connectorCompleted
                           ? "w-full bg-primary"
@@ -61,6 +68,7 @@ export default function ConsultationStepper({
               )}
 
               {/* Circle */}
+
               <div
                 className={`
                   relative
@@ -88,9 +96,11 @@ export default function ConsultationStepper({
               </div>
 
               {/* Label */}
+
               <span className="mt-2 text-center text-xs text-muted font-heading">
                 {label}
               </span>
+
             </div>
           );
         })}

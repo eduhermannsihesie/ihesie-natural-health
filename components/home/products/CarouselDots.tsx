@@ -12,7 +12,7 @@ export default function CarouselDots({
   onSelect,
 }: Props) {
   return (
-    <div className="mt-8 flex justify-center gap-3">
+    <div className="mt-15 flex justify-center gap-3">
       {Array.from({ length: count }).map((_, index) => (
         <button
           key={index}

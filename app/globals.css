@@ -128,7 +128,7 @@
   --color-surface-earth-dark: var(--secondary-earth-900);
   --color-surface-burnt: var(--secondary-burnt-50);
   --color-surface-burnt-dark: var(--secondary-burnt-900);
-
+  --color-surface-burnt-light: var(--secondary-burnt-50);
 
   --color-gray-300: var(--gray-300);
   --color-border: var(--border);

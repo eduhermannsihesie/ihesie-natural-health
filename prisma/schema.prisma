@@ -1,0 +1,99 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Order {
+  id String @id @default(cuid())
+
+  fullName String
+  email    String
+  phone    String
+  address  String
+  city     String
+  state    String
+
+  currency    String @default("NGN")
+  subtotal    Int
+  deliveryFee Int    @default(0)
+  total       Int
+
+  status OrderStatus @default(PENDING)
+
+  paymentReference        String?   @unique
+  confirmationEmailSentAt DateTime?
+
+  items OrderItem[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model OrderItem {
+  id String @id @default(cuid())
+
+  productId String
+  name      String
+  image     String
+  price     Int
+  quantity  Int
+  subtotal  Int
+
+  orderId String
+  order   Order  @relation(fields: [orderId], references: [id], onDelete: Cascade)
+}
+
+model Consultation {
+  id String @id @default(cuid())
+
+  consultationNumber String @unique
+
+  treatment       String
+  appointmentDate DateTime
+  appointmentTime String
+
+  fullName String
+  age      Int
+  email    String
+  phone    String
+
+  healthConcern String?
+  communication String
+
+  amount   Int
+  currency String @default("NGN")
+
+  paymentStatus ConsultationPaymentStatus @default(PENDING)
+  bookingStatus ConsultationBookingStatus @default(PENDING)
+
+  paymentReference String? @unique
+
+  confirmationEmailSentAt DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+}
+
+enum OrderStatus {
+  PENDING
+  PAID
+  FAILED
+  CANCELLED
+}
+
+enum ConsultationPaymentStatus {
+  PENDING
+  PAID
+  FAILED
+}
+
+enum ConsultationBookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+}

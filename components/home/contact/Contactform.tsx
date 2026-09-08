@@ -1,5 +1,5 @@
 "use client";
-import Button from "../../ui/Button";
+
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -7,7 +7,6 @@ import {
   contactSchema,
   ContactFormData,
 } from "@/lib/validations/contactSchema";
-import { on } from "process";
 
 export default function ContactForm() {
   const {
@@ -20,30 +19,37 @@ export default function ContactForm() {
     });
 
     const onSubmit = async (data: ContactFormData) => {
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-        const response = await fetch("/api/contact",{
+    const result = await response.json();
 
-            method:"POST",
+    if (!response.ok) {
+      throw new Error(result.message || "Failed to send message");
+    }
 
-            headers:{
-                "Content-Type":"application/json",
-            },
+    reset();
 
-            body:JSON.stringify(data),
+    alert("Message sent successfully!");
 
-        });
+  } catch (error) {
+  console.error("CONTACT FORM ERROR:", error);
 
-        if(response.ok){
-
-            reset();
-
-            alert("Message sent successfully!");
-
-        }
-
-    };
+  alert(
+    error instanceof Error
+      ? error.message
+      : "Sorry, we couldn't send your message. Please try again."
+  );
+}
+};
     return (
-         <form onSubmit={handleSubmit(onSubmit)} className="mx-auto mt-25 max-w-6xl">
+         <form onSubmit={handleSubmit(onSubmit)} className="mx-auto mt-20 max-w-6xl">
 
           <div className="mb-8 grid lg:gap-40 lg:grid-cols-2">
 
@@ -161,7 +167,7 @@ export default function ContactForm() {
                 </label>
 
                 <textarea
-                  rows={6}
+                  rows={4}
                   {...register("message")}
                   className="
                     w-full
@@ -182,11 +188,11 @@ export default function ContactForm() {
 
           {/* Button */}
 
-          <div className="mt-18 flex justify-center">
+          <div className="mt-10 flex justify-center">
 
             <button
               disabled={isSubmitting}
-              className="px-15 py-1 rounded-sm border-2 border-primary text-primary bg-surface-green font-semibold text-lg hover:bg-primary hover:text-white"
+              className="px-15 py-1 rounded-sm border-2 border-surface-burnt-dark text-surface-burnt-dark bg-surface-burnt-light font-semibold text-lg hover:bg-surface-burnt-dark hover:text-surface-burnt-light cursor-pointer transition-colors duration-300"
             >
               {isSubmitting ? "Sending..." : "Submit"}
             </button>

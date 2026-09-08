@@ -7,23 +7,25 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section className="pt-30 lg:pt-38">
+    <section className="pt-28 lg:pt-40">
 
       <Container>
 
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-2xl text-center">
 
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[40px] font-medium">
             Our Natural Wellness Services
           </h2>
 
           <p className="mt-4 text-xl font-medium text-primary-hover ">Supporting Your Journey to Better Health</p>
 
-         
+          <p className="mt-4 text-muted">
+              Every individual deserves a personalized approach to health. Our natural wellness programs are designed to support different aspects of physical and emotional well-being.
+            </p>
 
         </div>
 
-  <div className="relative mt-8 overflow-hidden mx-auto max-w-5xl px-4 py-6 lg:py-10 lg:px-8">
+  <div className="relative mt-8 overflow-hidden mx-auto max-w-235 px-4 py-5 lg:py-8 lg:px-6">
   <Image 
     src="/images/plant-background.png" 
     fill
@@ -100,11 +102,9 @@ export default function Services() {
 
         <div className=" mt-4 lg:mt-6 flex  flex-col gap-7 items-center">
 
-           <p className="mt-4 text-center max-w-3xl">
-            Every individual deserves a personalized approach to health. Our natural wellness programs are designed to support different aspects of physical and emotional well-being.
-          </p>
+           
 
-          <Link href="/contactus">
+          <Link href="/book-consultation">
 
             <Button 
               size="lg"

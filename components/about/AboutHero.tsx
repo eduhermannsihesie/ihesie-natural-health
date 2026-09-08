@@ -5,18 +5,18 @@ export default function AboutHero() {
    <section className="pt-20 lg:pt-28">
       <Container>
 
-        <div className="mx-auto max-w-5xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
 
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xltext-4xl lg:text-5xl leading-tight font-medium">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xltext-4xl lg:text-[40px] leading-tight font-medium">
             About Us
           </h2>
     
 
-          <p className="mt-10 text-base text-primary-hover">
+          <p className="mt-10 text-base text-muted">
            At Ihesie Natural Health Services, we believe that nature offers remarkable resources that can support human health and well-being. Our passion is to help individuals and families embrace a holistic approach to wellness through botanical remedies, natural therapies, and healthy lifestyle practices.
           </p>
 
-          <p className="mt-6 text-base text-primary-hover">
+          <p className="mt-6 text-base text-muted">
             Our work is founded on the belief that true wellness comes from restoring balance within the body rather than simply addressing isolated concerns. By combining traditional natural wisdom with ongoing research and professional understanding, we strive to provide natural wellness solutions that support long-term health and vitality.
           </p>
 

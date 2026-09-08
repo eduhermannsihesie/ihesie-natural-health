@@ -6,7 +6,7 @@ import ProductCarousel from "./ProductCarousel";
 
 export default function FeaturedProducts() {
   return (
-    <section className="pt-30 lg:pt-38">
+    <section className="pt-28 lg:pt-40">
 
       <Container>
 
@@ -17,11 +17,11 @@ export default function FeaturedProducts() {
 
               <div className="w-full lg:max-w-2xl">
 
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-foreground">
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-[40px] font-medium text-foreground">
                   Featured Natural Remedies
                 </h2>
 
-                <p className="mt-4 text-base lg:text-lg text-primary-hover">
+                <p className="mt-4 text-base text-muted">
                   We offer carefully developed herbal products focused on supporting different aspects of health and wellness.
                 </p>
 

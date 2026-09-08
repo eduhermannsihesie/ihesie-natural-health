@@ -40,6 +40,7 @@ export default function StepCard({
               mt-1
               text-base
               max-w-xs
+              text-muted
             "
           >
             {description}

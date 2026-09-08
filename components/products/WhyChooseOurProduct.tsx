@@ -7,7 +7,7 @@ import FeatureProductItem from "./FeaturedProductItem";
 
 export default function WhyChooseOurProduct() {
   return (
-    <section className="relative overflow-hidden pt-20 lg:pt-28">
+    <section className="relative overflow-hidden pt-28 lg:pt-38">
 
       {/* Decorative flower */}
      <Image
@@ -33,7 +33,7 @@ export default function WhyChooseOurProduct() {
 
         <div className="mt-20 text-center max-w-3xl mx-auto">
 
-          <h2 className="font-heading text-4xl lg:text-5xl font-medium">
+          <h2 className="font-heading text-4xl lg:text-[40px] font-medium">
             Why Choose Our Products?
           </h2>
 
@@ -43,14 +43,13 @@ export default function WhyChooseOurProduct() {
 
         <div
           className="
-            mt-14
-            lg:mt-20
+            mt-10
+            lg:mt-12
+            lg:px-30
             grid
             grid-cols-1
             lg:grid-cols-2
             gap-10
-            lg:gap-20
-            xl:gap-24
             items-center
             max-w-6xl
             mx-auto

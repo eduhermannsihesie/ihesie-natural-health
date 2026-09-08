@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function HealingApproach() {
   return (
-    <section className="pt-30 lg:pt-38">
+    <section className="pt-30 lg:pt-40">
       <Container>
 
         {/* Heading */}
@@ -17,7 +17,7 @@ export default function HealingApproach() {
         <div className="text-center max-w-3xl mx-auto">
 
           
-           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xltext-4xl lg:text-5xl leading-tight font-medium">
+           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[40px] font-medium">
              Our Healing Approach
           </h2>
 

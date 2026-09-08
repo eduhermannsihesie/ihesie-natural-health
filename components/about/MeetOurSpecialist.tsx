@@ -3,18 +3,17 @@ import Container from "@/components/layout/Container";
 
 export default function CoreBelief() {
   return (
-    <section className="pt-30 lg:pt-38">
+    <section className="pt-30 lg:pt-40">
 
       <Container>
 
         <div className="mx-auto flex flex-col items-center gap-15 lg:gap-20">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[40px] font-medium">
               Meet the Specialist
             </h2>
 
-        <div className="flex flex-col lg:flex-row items-center gap-15 lg:gap-30 ">
+        <div className="flex lg:px-30 flex-col lg:flex-row items-center gap-6">
           <div className="flex flex-col gap-6">
-            
             <div>
 
             <h4 className="text-lg lg:text-2xl font-medium">

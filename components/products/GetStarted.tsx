@@ -7,7 +7,7 @@ import { gettingStarted } from "@/constants/gettingStarted";
 
 export default function GettingStarted() {
   return (
-    <section className="relative py-20 lg:py-28 bg-white">
+    <section className="relative pt-28 lg:pt-38 bg-white">
 
       {/* Decorative Leaf */}
 
@@ -19,7 +19,7 @@ export default function GettingStarted() {
         className="
           absolute
           right-0
-          -bottom-20
+          top-80
           w-16
           md:w-20
           lg:w-24
@@ -31,7 +31,7 @@ export default function GettingStarted() {
 
         <div className="text-center">
 
-          <h2 className="font-heading text-4xl md:text-5xl">
+          <h2 className="font-heading text-4xl md:text-[40px] font-medium">
             How to Get Started
           </h2>
 

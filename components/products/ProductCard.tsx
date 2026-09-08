@@ -24,18 +24,7 @@ export default function ProductCard({
     <article
       className="bg-transparent flex flex-col h-full"
     >
-      {/* Image */}
-
-      {/* <div
-        className="
-          flex
-          items-center
-          justify-center
-          bg-surface-earth-light
-          h-72
-          p-6
-        "
-      > */}
+      
       <div className=" transition duration-300 hover:shadow-lg flex items-center justify-center relative h-70 rounded-md bg-surface-earth-light">
         <Image
           src={image}
@@ -50,13 +39,13 @@ export default function ProductCard({
 
       <div className="mt-6">
 
-        <h3 className="font-body font-medium text-xl truncate w-full leading-snug">
+        <h3 className="font-medium text-xl truncate w-full leading-snug">
           {name}
         </h3>
 
         <p
           className="
-            mt-3
+            mt-2
             text-muted
             text-sm
             leading-7
@@ -70,7 +59,7 @@ export default function ProductCard({
 
         <div
           className="
-            mt-6
+            mt-2
             flex
             items-center
             justify-between
@@ -88,7 +77,7 @@ export default function ProductCard({
        
         <Button
           variant="secondary"
-          className="mt-8 rounded-xl text-xl w-full "
+          className="mt-6 rounded-xl text-xl w-full "
         >
           Buy
         </Button>

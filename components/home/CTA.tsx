@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function CallToAction() {
   return (
-    <section className="pt-20 lg:pt-28">
+    <section className="pt-20 lg:pt-38">
 
 
         <div
@@ -22,7 +22,7 @@ export default function CallToAction() {
             className="
               font-heading
               text-4xl
-              lg:text-5xl
+              lg:text-[40px]
               font-medium
               text-white
               leading-tight
@@ -34,10 +34,9 @@ export default function CallToAction() {
           <p
             className="
               mx-auto
-              mt-5
+              mt-4
               max-w-3xl
-              text-lg
-              lg:text-xl
+              text-base
               leading-7
               lg:leading-8
               text-white/90
@@ -77,12 +76,15 @@ export default function CallToAction() {
               </Button>
             </Link>
 
+        
             <Link
-              href="https://wa.me/2348012345678"
+              href="https://wa.me/2347066085704?text=Hello%20Ihesie%20Natural%20Health%20Services%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+              target="_blank"
               className="w-full sm:w-auto"
             >
               <Button
                 variant="secondary"
+                
                 className="
                   w-full
                   sm:w-auto

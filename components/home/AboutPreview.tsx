@@ -8,45 +8,45 @@ import Button from "@/components/ui/Button";
 
 export default function AboutPreview() {
   return (
-    <section className="pt-20 lg:pt-28">
+    <section className="pt-28 lg:pt-38">
       <Container>
 
-        <div className="relative grid lg:grid-cols-2 items-center">
+        <div className="relative grid lg:grid-cols-2 items-center lg:px-30">
 
          <Image
               src="/images/leaf1.png"
               width={400}
               height={400}
               alt="Medicinal Herb"
-              className="absolute -left-20 -bottom-60 w-50"
+              className="absolute -left-20 -bottom-60 w-35"
             />
 
           {/* Left */}
 
           <div>           
 
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium">
+            <h3 className="font-heading text-3xl sm:text-4xl lg:text-[40px] font-medium">
               Nature's Healing,
               <br />
               Backed by Research
-            </h2>
+            </h3>
 
           </div>
 
           {/* Right */}
 
-          <div className="flex flex-col items-start justify-center">
+          <div className="flex flex-col items-start justify-center max-w-md">
 
-            <p className="mt-6">
+            <p className="mt-6 text-muted">
               At Ihesie Natural Health Services, we believe that nature holds the answer to lasting wellness. Our mission is to combine the healing power of Earth's vegetation with professional research and holistic healthcare practices to help individuals regain sound health naturally.
             </p>
 
-            <p className="mt-6">
+            <p className="mt-6 text-muted">
               For years, we have developed natural remedies, therapies, and wellness protocols focused on addressing the root causes of illness — not just temporary symptoms.
             </p>
 
             <div className="mt-10">
-              <Link href="/aboutus">
+              <Link href="/about-us">
 
                 <Button 
                     variant="secondary"

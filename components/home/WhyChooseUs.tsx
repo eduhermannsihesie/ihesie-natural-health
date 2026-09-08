@@ -9,7 +9,7 @@ import FeatureItem from "./FeatureItem";
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative overflow-hidde pt-30 lg:pt-38">
+    <section className="relative overflow-hidde pt-30 lg:pt-40">
 
       {/* Decorative flower */}
      <Image
@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
 
         <div className="text-center max-w-3xl mx-auto">
 
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium ">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[40px] font-medium ">
             Why Choose Us
           </h2>
 
@@ -51,12 +51,11 @@ export default function WhyChooseUs() {
           className="
             mt-10
             lg:mt-12
+            lg:px-30
             grid
             grid-cols-1
             lg:grid-cols-2
             gap-10
-            lg:gap-20
-            xl:gap-24
             items-center
             max-w-6xl
             mx-auto
@@ -112,7 +111,7 @@ export default function WhyChooseUs() {
 
         <div className="mt-10 lg:mt-16 flex justify-center">
 
-          <Link href="/contactus">
+          <Link href="/book-consultation">
 
             <Button 
               size="lg"

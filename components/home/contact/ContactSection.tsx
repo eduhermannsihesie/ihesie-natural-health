@@ -4,7 +4,7 @@ import ContactForm from "./Contactform";
 
 export default function ContactSection() {
   return (
-    <section className="relative overflow-hidden pt-30 px-0 lg:px-22 lg:pt-38 ">
+    <section className="relative overflow-hidden pt-30 px-0 lg:px-22 lg:pt-40 ">
 
       {/* Decorative flower */}
       <Image
@@ -25,7 +25,7 @@ export default function ContactSection() {
       <Container>
 
         {/* Heading */}
-    <div className="mx-auto max-w-5xl">
+    <div className="mx-auto max-w-3xl">
         <div className="text-center">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium">
             Get in Touch

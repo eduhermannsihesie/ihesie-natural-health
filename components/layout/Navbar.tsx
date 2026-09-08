@@ -6,7 +6,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingCart} from "lucide-react";
+import { useCart } from "@/components/cart/CartProvider";
+import CartButton from "@/components/cart/CartButton";
 
 import Logo from "@/public/branding/ihesie-logo.png";
 
@@ -18,6 +20,8 @@ import { navigation } from "@/constants/navigation";
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const { cartCount} = useCart()
 
   return (
     <header
@@ -82,7 +86,12 @@ export default function Navbar() {
                   ))}
                 </nav>
 
-               
+                  {/* Cart */}
+
+                  <CartButton />
+
+{/* Book Consultation */}
+              
 
                <Link href="/book-consultation">
 
@@ -133,7 +142,7 @@ export default function Navbar() {
                 duration-300
                 ${
                   mobileOpen
-                    ? "max-h-[500px] py-6"
+                    ? "max-h-125 py-6"
                     : "max-h-0 py-0"
                 }
               `}

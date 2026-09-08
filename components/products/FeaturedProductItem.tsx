@@ -10,13 +10,12 @@ export default function FeatureItem({
   description,
 }: Props) {
   return (
-    <div className="flex items-start gap-4 sm:gap-6 lg:gap-8">
+    <div className="flex items-start gap-4">
       <span
         className="
           shrink-0
           font-heading
           text-3xl
-          lg:text-4xl
           font-bold
           text-primary-hover
         "

@@ -3,6 +3,7 @@ import crypto from "crypto";
 
 import { prisma } from "@/lib/prisma";
 import { sendOrderConfirmation } from "@/lib/email/sendOrderConfirmation";
+import { sendConsultationConfirmation } from "@/lib/email/sendConsultationConfirmation";
 
 export async function POST(request: Request) {
   try {
@@ -60,43 +61,38 @@ export async function POST(request: Request) {
     const event = JSON.parse(rawBody);
 
     // We only care about successful payments
-    if (event.event === "charge.success") {
-      const transaction = event.data;
+    if (event.event !== "charge.success") {
+      return NextResponse.json(
+        {
+          received: true,
+        },
+        {
+          status: 200,
+        }
+      );
+    }
 
-      const reference =
-        transaction.reference;
+    const transaction = event.data;
+    const reference = transaction.reference;
 
-      // Find the order and its products
-      const order =
-        await prisma.order.findUnique({
-          where: {
-            paymentReference: reference,
-          },
+    /*
+     * FIRST:
+     * Check whether this payment belongs
+     * to a product order.
+     */
 
-          include: {
-            items: true,
-          },
-        });
+    const order =
+      await prisma.order.findUnique({
+        where: {
+          paymentReference: reference,
+        },
 
-      if (!order) {
-        console.error(
-          "Webhook order not found:",
-          reference
-        );
+        include: {
+          items: true,
+        },
+      });
 
-        // Return 200 because the webhook itself
-        // was received successfully.
-        return NextResponse.json(
-          {
-            received: true,
-          },
-          {
-            status: 200,
-          }
-        );
-      }
-
-      // Paystack uses kobo
+    if (order) {
       const expectedAmount =
         order.total * 100;
 
@@ -109,7 +105,7 @@ export async function POST(request: Request) {
 
       if (!paymentIsValid) {
         console.error(
-          "Webhook payment validation failed:",
+          "Order webhook payment validation failed:",
           {
             reference,
             expectedAmount,
@@ -132,13 +128,6 @@ export async function POST(request: Request) {
         );
       }
 
-      /*
-       * STEP 1
-       *
-       * Mark the order as PAID if it
-       * hasn't already been marked PAID.
-       */
-
       if (order.status !== "PAID") {
         await prisma.order.update({
           where: {
@@ -155,17 +144,6 @@ export async function POST(request: Request) {
           order.id
         );
       }
-
-      /*
-       * STEP 2
-       *
-       * Email handling is separate from
-       * payment status.
-       *
-       * This means a Paystack webhook retry
-       * can retry the email even when the
-       * order is already PAID.
-       */
 
       if (!order.confirmationEmailSentAt) {
         try {
@@ -197,8 +175,6 @@ export async function POST(request: Request) {
             ),
           });
 
-          // Only record the email as sent
-          // after Resend succeeds.
           await prisma.order.update({
             where: {
               id: order.id,
@@ -226,7 +202,158 @@ export async function POST(request: Request) {
           order.id
         );
       }
+
+      return NextResponse.json(
+        {
+          received: true,
+        },
+        {
+          status: 200,
+        }
+      );
     }
+
+    /*
+     * SECOND:
+     * If no order exists, check whether
+     * this payment belongs to a consultation.
+     */
+
+    const consultation =
+      await prisma.consultation.findUnique({
+        where: {
+          paymentReference: reference,
+        },
+      });
+
+    if (consultation) {
+      const expectedAmount =
+        consultation.amount * 100;
+
+      const paymentIsValid =
+        transaction.status === "success" &&
+        Number(transaction.amount) ===
+          expectedAmount &&
+        transaction.currency ===
+          consultation.currency;
+
+      if (!paymentIsValid) {
+        console.error(
+          "Consultation webhook payment validation failed:",
+          {
+            reference,
+            expectedAmount,
+            receivedAmount:
+              transaction.amount,
+            expectedCurrency:
+              consultation.currency,
+            receivedCurrency:
+              transaction.currency,
+          }
+        );
+
+        return NextResponse.json(
+          {
+            received: true,
+          },
+          {
+            status: 200,
+          }
+        );
+      }
+
+      if (
+        consultation.paymentStatus !==
+          "PAID" ||
+        consultation.bookingStatus !==
+          "CONFIRMED"
+      ) {
+        await prisma.consultation.update({
+          where: {
+            id: consultation.id,
+          },
+
+          data: {
+            paymentStatus: "PAID",
+            bookingStatus: "CONFIRMED",
+          },
+        });
+
+        console.log(
+          "Consultation confirmed by webhook:",
+          consultation.id
+        );
+      }
+
+      if (
+        !consultation.confirmationEmailSentAt
+      ) {
+        try {
+          await sendConsultationConfirmation({
+            email: consultation.email,
+            fullName: consultation.fullName,
+            consultationNumber:
+              consultation.consultationNumber,
+            treatment:
+              consultation.treatment,
+            appointmentDate:
+              consultation.appointmentDate,
+            appointmentTime:
+              consultation.appointmentTime,
+            communication:
+              consultation.communication,
+            amount: consultation.amount,
+            paymentReference:
+              consultation.paymentReference,
+          });
+
+          await prisma.consultation.update({
+            where: {
+              id: consultation.id,
+            },
+
+            data: {
+              confirmationEmailSentAt:
+                new Date(),
+            },
+          });
+
+          console.log(
+            "Consultation confirmation email sent:",
+            consultation.id
+          );
+        } catch (emailError) {
+          console.error(
+            "Consultation confirmation email error:",
+            emailError
+          );
+        }
+      } else {
+        console.log(
+          "Consultation confirmation email already sent:",
+          consultation.id
+        );
+      }
+
+      return NextResponse.json(
+        {
+          received: true,
+        },
+        {
+          status: 200,
+        }
+      );
+    }
+
+    /*
+     * Neither an order nor consultation
+     * was found for this reference.
+     */
+
+    console.error(
+      "Webhook payment reference not found:",
+      reference
+    );
 
     return NextResponse.json(
       {
